@@ -89,12 +89,7 @@ plt.show()
 
 net.save("Digit_Cllasifire_2.h5")
 
-"""Image Processing With CV2 and Predict Phase
-
-
-
-
-"""
+"""Image Processing With CV2 and Predict Phase"""
 
 net = load_model("/content/drive/MyDrive/Digit_Cllasifire.h5")
 img = cv2.imread("/content/drive/MyDrive/DIGIt 2.png")
@@ -116,6 +111,7 @@ for i in range(len(cnts)):
   print(max_index)
   cv2.rectangle(img , (x-10,y-10), (x+w+10 , y+h+10), (0,255,0),2)
   cv2.putText(img, str(max_index),(x , y-10),cv2.FONT_HERSHEY_SIMPLEX , 1.2 , (0,255,0), 2)
+
 cv2_imshow(img)
 cv2.waitKey(0)
 
